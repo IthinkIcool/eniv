@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JP Retro Radio Interactive</title>
+    
+    <!-- Font untuk teks Jepang yang lebih otentik -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="radio-container">
+      <!-- Top buttons row -->
+      <div class="buttons-row">
+        <button class="preset-btn" data-preset="0">Encounter</button>
+        <button class="preset-btn" data-preset="1">First time</button>
+        <button class="preset-btn" data-preset="2">Heartbeat</button>
+        <button class="preset-btn" data-preset="3">Love</button>
+        <button class="preset-btn" data-preset="5">Cherry blossom</button>
+      </div>
+
+      <!-- Main radio body -->
+      <div class="radio-body">
+        <!-- Left section: Equalizer + Display -->
+        <div class="left-section">
+          <!-- Equalizer panel -->
+          <div class="equalizer-panel">
+            <div class="eq-bar"></div>
+            <div class="eq-bar"></div>
+            <div class="eq-bar"></div>
+            <div class="eq-bar"></div>
+            <div class="eq-bar"></div>
+          </div>
+
+          <!-- Display area -->
+          <div class="display-panel">
+            <div class="display-content">
+              <!-- Content Item 0 -->
+              <div class="content-item active" data-content="0">
+                <h2 class="title-jp">First Sight</h2>
+                <p class="subtitle-en" >
+                  <img class="inline-image align-left" src="el1.jpg" alt="Encounter">
+                  Satu tahun berlalu, dan aku masih ingat saat mataku terpana
+                  oleh pesonamu saat pertama kali melihatmu. Detik itu adalah
+                  momen yang terukir indah dalam ingatanku, tak pernah pudar.
+                </p>
+              </div>
+
+              <!-- Content Item 1 -->
+              <div class="content-item" data-content="1">
+                <h2 class="title-jp">Courage</h2>
+                <p class="subtitle-en">
+                  <img class="inline-image align-right" src="el4.jpg" alt="Courage">
+                  A Man who keeps his feelings hidden, watching you from a kind
+                  distance. Mencari apa yang kamu sukai, berharap suatu hari aku
+                  bisa mendekatimu. Setiap langkah kecil membutuhkan keberanian.
+                </p>
+              </div>
+
+              <!-- Content Item 2 -->
+              <div class="content-item" data-content="2">
+                <h2 class="title-jp">The Feelings</h2>
+                <p class="subtitle-en">
+                  <img class="inline-image align-center" src="el2.jpg" alt="Feelings">
+                  Perasaan yang tumbuh semakin kuat setiap kali bertemu.
+                  Perasaan yang tidak bohong ini mendorongku untuk berani
+                  berbicara denganmu, and i hope to hear your voice more often.
+                </p>
+              </div>
+
+              <!-- Content Item 3 -->
+              <div class="content-item" data-content="3">
+                <h2 class="title-jp">My First Love</h2>
+                <p class="subtitle-en">
+                  <img class="inline-image align-left" src="el3.jpg" alt="First Love">
+                  Finally, I gathered the courage to confess my feelings. You
+                  are my first love (yes You are!). You are my first in
+                  everything that happens to me, aku selalu bahagia di setiap
+                  moment yang kita lalui bersama. Thank you for being by my side.
+                </p>
+              </div>
+          <!-- Content Item 5 - Cherry blossom dengan GIF -->
+            <div class="content-item" data-content="5">
+                <h2 class="title-jp">Hopes</h2>
+                <p class="subtitle-en">
+                    I hope our love will continue to bloom like a flowers. May our
+                    relationship always be filled with happiness and warmth,
+                    seperti mekarnya bunga sakura di musim semi.
+                </p>
+                
+                <!-- GIF CONTAINER - Simple dan pasti work -->
+                <div class="gif-container align-center">
+                    <img class="cherry-gif" src="vid.gif" alt="Cherry blossom animation">
+                </div>
+                
+                <p class="subtitle-en" style="margin-top: 12px;">
+                    I love You Angel always. 
+                </p>
+            </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Right section: Cassette + Power -->
+        <div class="right-section">
+          <!-- Cassette deck -->
+          <div class="cassette-deck">
+            <div class="cassette-reel left-reel"></div>
+            <div class="cassette-reel right-reel"></div>
+            <div class="cassette-center"></div>
+          </div>
+
+          <!-- Speaker grille -->
+          <div class="speaker">
+            <div class="speaker-grid"></div>
+          </div>
+
+          <!-- Power button -->
+          <button class="power-btn" id="powerBtn">
+            <span>POWER</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="bottom-bar">
+        <span class="bar-text">Just the Way You Are</span>
+        <div class="bar-indicator"></div>
+      </div>
+    </div>
+
+    <!-- Hidden audio element -->
+    <audio id="audioPlayer" preload="auto">
+      <source src="Bruno Mars - Just the Way You Are.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
